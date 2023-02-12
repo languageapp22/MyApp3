@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="save_exit">Save/Exit</string>
+    <string name="one_more">One more</string>
+    <string name="go_back">Go back</string>
+    <string name="title">Title</string>
+    <string name="menu_icon">Menu icon</string>
+    <string name="front">Front</string>
+    <string name="back">Back</string>
+    <string name="add_icon">add icon</string>
+    <string name="save_button">save button</string>
+    <string name="add_cards">Add cards</string>
+    <string name="save">Save</string>
+    <string name="word">Word</string>
+    <string name="translation">Translation</string>
+    <string name="icon">Icon</string>
+
+    <string name="action_search">Search</string>
+
+
+    //Back Arrow Path Data
+    <string name="back_vector_path" translatable="false">M50 25,L80 50,M20 50,L80 50,M50 75,L80 50</string>
+    //Menu Path Data
+    <string name="menu_vector_path" translatable="false">M20 30,L80 30,M20 50,L80 50,M20 70,L80 70</string>
+
+</resources>

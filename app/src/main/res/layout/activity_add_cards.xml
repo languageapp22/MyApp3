@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:id="@+id/drawer_layout"
+    android:background="@color/home_background"
+    tools:context=".Cards.AddCards">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/menu_header"
+        app:menu="@menu/main_menu"/>
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu_icon"
+                android:contentDescription="@string/menu_icon"/>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+
+                <EditText
+                    android:id="@+id/edtBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBack"
+                    android:autofillHints="text for the back of the card"/>
+
+                <EditText
+                    android:id="@+id/edtFront"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFront"
+                    android:autofillHints="text for the front of the card"/>
+
+                <TextView
+                    android:id="@+id/tvFront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/front"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivAdd" />
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:text="@string/back"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtFront" />
+
+                <Button
+                    android:id="@+id/tvDone"
+                    android:layout_width="137dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/save_exit"
+                    android:textColor="#B81B1B"
+                    android:backgroundTint="@color/salmon_pink"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/tvAddAnother"
+                    android:layout_width="137dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="14dp"
+                    android:text="@string/one_more"
+                    android:textColor="#4CAF50"
+                    android:backgroundTint="@color/salmon_pink"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDone" />
+
+                <Button
+                    android:id="@+id/go_back"
+                    android:layout_width="137dp"
+                    android:layout_height="36dp"
+                    app:flow_horizontalAlign="center"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/go_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtBack"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <EditText
+                    android:id="@+id/edtAddTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="64dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/title"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:autofillHints="Add title for the new deck"/>
+
+                <ImageView
+                    android:id="@+id/ivSave"
+                    android:layout_width="22dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDone"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/edtAddTitle"
+                    app:layout_constraintTop_toTopOf="@+id/tvDone"
+                    app:srcCompat="@android:drawable/ic_menu_save"
+                    android:contentDescription="@string/save_button"/>
+
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="22dp"
+                    android:layout_height="36dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvAddAnother"
+                    app:layout_constraintTop_toTopOf="@+id/tvAddAnother"
+                    app:srcCompat="@android:drawable/ic_menu_add"
+                    android:contentDescription="@string/add_icon"/>
+
+                <ProgressBar
+                    android:id="@+id/pgBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
